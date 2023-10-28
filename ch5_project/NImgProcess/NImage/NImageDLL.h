@@ -7,7 +7,7 @@
 
 #include <windows.h>
 
-#ifdef CH4DLL_EXPORTS
+#ifdef NIMAGE_EXPORTS
 #define MYDLL_API __declspec(dllexport)
 #else
 #define MYDLL_API __declspec(dllimport)
@@ -21,6 +21,7 @@ MYDLL_API LONG_PTR __cdecl CreateNImage();
 MYDLL_API bool  __cdecl DestroyNImage(LONG_PTR m_Img);
 MYDLL_API bool  __cdecl LoadBMP(LONG_PTR m_Img ,char* filename);
 MYDLL_API HBITMAP* __cdecl GetBitmap(LONG_PTR m_Img);
+
 
 #ifdef __cplusplus
 }
